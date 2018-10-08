@@ -6,8 +6,9 @@
       </button>
       <span>Responsive Navigation</span>
       <span class="menu-spacer"></span>
-      <div fxShow="true" class="routes-container" fxHide.lt-md>
+      <div class="routes-container" fxShow="true" fxHide.lt-md="true">
         <span mat-button *ngFor="let route of routes" routerLink="{{route.route}}" href="#" mat-list-item>{{ route.name }}</span>
+
       </div>
     </mat-toolbar-row>
   </mat-toolbar>

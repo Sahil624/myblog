@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,9 +11,12 @@ import { MatToolbarModule,
           MatListModule,
           MatButtonModule,
           MatIconModule,
-          MatCardModule
+          MatCardModule,
         } from "@angular/material";
-import { FlexLayoutModule, BREAKPOINTS, DEFAULT_BREAKPOINTS } from "@angular/flex-layout";
+        
+import { FlexLayoutModule } from "@angular/flex-layout";
+
+import { BlogServiceService } from './_providers/blog-service/blog-service.service';
 
 import { LandingPageComponent } from './_components/landing-page/landing-page.component';
 import { AboutComponent } from './_components/about/about.component';
@@ -34,9 +38,10 @@ import { AboutComponent } from './_components/about/about.component';
     MatIconModule,
     MatButtonModule,
     MatListModule,
-    MatCardModule
+    MatCardModule,
+    HttpClientModule
   ],
-  providers: [{provide: BREAKPOINTS, useValue: DEFAULT_BREAKPOINTS}],
+  providers: [BlogServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
