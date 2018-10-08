@@ -1,0 +1,55 @@
+$width: 250px; // Images size wanted
+$max: 2500px; // max supported screen width
+
+
+.gal{
+  display: block;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  li{
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    transition: width .15s;
+    width: 100%;
+    @for $i from 2 through round($max/$width){
+      $mw: ($width * ($i - .5) );
+      @media ( min-width: $mw ){
+        width: (100%/$i);
+      }
+    }
+  }
+  img{
+    vertical-align: top;
+    width: 100%;
+  }
+}
+
+
+
+
+html:before{
+  $content: $width + ' × ' + $width;
+  content: $content;
+  display: block;
+  position: fixed;
+  width: $width;
+  height: $width;
+  background:rgba(blue,.4);
+  $c1: hsla(0,0%,25%,.6);
+  $c2: hsla(0,0%,15%,.6);
+  $strip: 10px;
+  border:1px solid green;
+  
+  background: repeating-linear-gradient(45deg,$c1, $c1 $strip,$c2 $strip,$c2 $strip*2);
+  line-height: $width;
+  text-align: center;
+  font-family: "lucida console", monospace;
+  font-weight: bold;
+  font-size: floor(($width - 20px) / str-length($content)) / 0.6;
+  color:white;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}

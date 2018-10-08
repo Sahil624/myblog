@@ -5,16 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatSidenavModule, MatListModule, MatButtonModule, MatIconModule } from "@angular/material";
-import { FlexLayoutModule } from "@angular/flex-layout";
+import { MatToolbarModule,
+          MatSidenavModule,
+          MatListModule,
+          MatButtonModule,
+          MatIconModule,
+          MatCardModule
+        } from "@angular/material";
+import { FlexLayoutModule, BREAKPOINTS, DEFAULT_BREAKPOINTS } from "@angular/flex-layout";
 
 import { LandingPageComponent } from './_components/landing-page/landing-page.component';
+import { AboutComponent } from './_components/about/about.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,9 +33,10 @@ import { LandingPageComponent } from './_components/landing-page/landing-page.co
     MatSidenavModule,
     MatIconModule,
     MatButtonModule,
-    MatListModule
+    MatListModule,
+    MatCardModule
   ],
-  providers: [],
+  providers: [{provide: BREAKPOINTS, useValue: DEFAULT_BREAKPOINTS}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
