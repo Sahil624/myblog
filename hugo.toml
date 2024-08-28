@@ -1,0 +1,134 @@
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+theme = "PaperMod"
+
+# -- Site Configuration --
+title = "Blog - Sahil Mangotra"
+
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+googleAnalytics = "G-FNK6G1Q9P7"
+pygmentsUseClasses = true
+
+[taxonomies]
+  series= "series"
+  
+[minify]
+disableXML = true
+minifyOutput = true
+
+[params]
+env = "production"
+title = "Blog - Sahil Mangotra"
+description = "Welcome to Sahil’s Tech Blog, your go-to resource for in-depth articles on technology, coding tutorials, machine learning, artificial intelligence, and the latest tech jobs. Whether you’re a software developer, AI enthusiast, or looking to break into the tech industry, this blog provides insights, tips, and practical guides to help you stay ahead in the fast-paced world of technology. Learn the latest coding trends, explore AI innovations, and get expert advice on landing your next tech job. Join our growing community of tech professionals and enthusiasts today!"
+keywords = [ "Blog", "Tech blog", "Coding tutorials", "Machine learning", "Artificial intelligence", "Tech jobs", "Software development", "AI innovations", "Technology trends", "Tech career advice" ]
+author = "Me"
+images = [ "<link or path of image for opengraph, twitter-cards>" ]
+DateFormat = "January 2, 2006"
+defaultTheme = "auto"
+disableThemeToggle = false
+ShowReadingTime = true
+ShowShareButtons = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = false
+ShowWordCount = true
+ShowRssButtonInSectionTermList = true
+UseHugoToc = true
+disableSpecial1stPost = false
+disableScrollToTop = false
+comments = false
+hidemeta = false
+hideSummary = false
+showtoc = false
+tocopen = false
+
+  [params.assets]
+  disableFingerprinting = true
+  favicon = "<link / abs url>"
+  favicon16x16 = "<link / abs url>"
+  favicon32x32 = "<link / abs url>"
+  apple_touch_icon = "<link / abs url>"
+  safari_pinned_tab = "<link / abs url>"
+
+  [params.label]
+  text = "Home"
+  icon = "/apple-touch-icon.png"
+  iconHeight = 35
+
+#   [params.profileMode]
+#   enabled = false
+#   title = "ExampleSite"
+#   subtitle = "This is subtitle"
+#   imageUrl = "<img location>"
+#   imageWidth = 120
+#   imageHeight = 120
+#   imageTitle = "my image"
+
+#     [[params.profileMode.buttons]]
+#     name = "Posts"
+#     url = "posts"
+
+#     [[params.profileMode.buttons]]
+#     name = "Tags"
+#     url = "tags"
+
+#   [params.homeInfoParams]
+#   Title = "Hi there 👋"
+#   Content = "Welcome to my blog"
+
+#   [[params.socialIcons]]
+#   name = "x"
+#   url = "https://x.com/"
+
+#   [[params.socialIcons]]
+#   name = "stackoverflow"
+#   url = "https://stackoverflow.com"
+
+#   [[params.socialIcons]]
+#   name = "github"
+#   url = "https://github.com/"
+
+  [params.cover]
+  hidden = true
+  hiddenInList = true
+  hiddenInSingle = true
+
+  [params.editPost]
+  URL = "https://github.com/<path_to_repo>/content"
+  Text = "Suggest Changes"
+  appendFilePath = true
+
+  [params.fuseOpts]
+  isCaseSensitive = false
+  shouldSort = true
+  location = 0
+  distance = 1_000
+  threshold = 0.4
+  minMatchCharLength = 0
+  limit = 10
+  keys = [ "title", "permalink", "summary", "content" ]
+
+[[menu.main]]
+identifier = "categories"
+name = "categories"
+url = "/categories/"
+weight = 10
+
+[[menu.main]]
+identifier = "tags"
+name = "tags"
+url = "/tags/"
+weight = 20
+
+[[menu.main]]
+identifier = "example"
+name = "example.org"
+url = "https://example.org"
+weight = 30
+
+[markup.highlight]
+noClasses = false
