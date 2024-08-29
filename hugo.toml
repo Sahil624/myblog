@@ -1,4 +1,4 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://blog.isahil.me/'
 languageCode = 'en-us'
 theme = "PaperMod"
 
@@ -23,7 +23,7 @@ minifyOutput = true
 [params]
 env = "production"
 title = "Blog - Sahil Mangotra"
-description = "Welcome to Sahil’s Tech Blog, your go-to resource for in-depth articles on technology, coding tutorials, machine learning, artificial intelligence, and the latest tech jobs. Whether you’re a software developer, AI enthusiast, or looking to break into the tech industry, this blog provides insights, tips, and practical guides to help you stay ahead in the fast-paced world of technology. Learn the latest coding trends, explore AI innovations, and get expert advice on landing your next tech job. Join our growing community of tech professionals and enthusiasts today!"
+description = "Welcome to Sahil's Tech Blog! Discover in-depth articles on tech, coding, AI, and more. Stay ahead in the fast-paced world of technology. Join our community today!"
 keywords = [ "Blog", "Tech blog", "Coding tutorials", "Machine learning", "Artificial intelligence", "Tech jobs", "Software development", "AI innovations", "Technology trends", "Tech career advice" ]
 author = "Me"
 images = [ "<link or path of image for opengraph, twitter-cards>" ]
@@ -46,88 +46,69 @@ hideSummary = false
 showtoc = false
 tocopen = false
 
-  [params.assets]
-  disableFingerprinting = true
-  favicon = "<link / abs url>"
-  favicon16x16 = "<link / abs url>"
-  favicon32x32 = "<link / abs url>"
-  apple_touch_icon = "<link / abs url>"
-  safari_pinned_tab = "<link / abs url>"
+[params.assets]
+disableFingerprinting = true
+favicon = "<link / abs url>"
+favicon16x16 = "<link / abs url>"
+favicon32x32 = "<link / abs url>"
+apple_touch_icon = "<link / abs url>"
+safari_pinned_tab = "<link / abs url>"
 
-  [params.label]
-  text = "Home"
-  icon = "/apple-touch-icon.png"
-  iconHeight = 35
+[params.label]
+text = "Home"
+icon = "/apple-touch-icon.png"
+iconHeight = 35
 
-#   [params.profileMode]
-#   enabled = false
-#   title = "ExampleSite"
-#   subtitle = "This is subtitle"
-#   imageUrl = "<img location>"
-#   imageWidth = 120
-#   imageHeight = 120
-#   imageTitle = "my image"
 
-#     [[params.profileMode.buttons]]
-#     name = "Posts"
-#     url = "posts"
+  [params.homeInfoParams]
+  Title = "Hi there 👋"
+  Content = "Welcome to my Blog! Discover in-depth articles on tech, coding, AI, and more. Stay ahead in the fast-paced world of technology!"
 
-#     [[params.profileMode.buttons]]
-#     name = "Tags"
-#     url = "tags"
+  [[params.socialIcons]]
+  name = "x"
+  url = "https://x.com/Sahilmangotra1"
 
-#   [params.homeInfoParams]
-#   Title = "Hi there 👋"
-#   Content = "Welcome to my blog"
 
-#   [[params.socialIcons]]
-#   name = "x"
-#   url = "https://x.com/"
+[[params.socialIcons]]
+name = "github"
+url = "https://github.com/sahil624/"
 
-#   [[params.socialIcons]]
-#   name = "stackoverflow"
-#   url = "https://stackoverflow.com"
+[params.cover]
+hidden = true
+hiddenInList = true
+hiddenInSingle = true
 
-#   [[params.socialIcons]]
-#   name = "github"
-#   url = "https://github.com/"
+[params.editPost]
+URL = "https://github.com/Sahil624/myblog/tree/main/content"
+Text = "Suggest Changes"
+appendFilePath = true
 
-  [params.cover]
-  hidden = true
-  hiddenInList = true
-  hiddenInSingle = true
+[params.fuseOpts]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1_000
+threshold = 0.4
+minMatchCharLength = 0
+limit = 10
+keys = [ "title", "permalink", "summary", "content" ]
 
-  [params.editPost]
-  URL = "https://github.com/<path_to_repo>/content"
-  Text = "Suggest Changes"
-  appendFilePath = true
+# [[menu.main]]
+# identifier = "categories"
+# name = "categories"
+# url = "/categories/"
+# weight = 10
 
-  [params.fuseOpts]
-  isCaseSensitive = false
-  shouldSort = true
-  location = 0
-  distance = 1_000
-  threshold = 0.4
-  minMatchCharLength = 0
-  limit = 10
-  keys = [ "title", "permalink", "summary", "content" ]
+# [[menu.main]]
+# identifier = "tags"
+# name = "tags"
+# url = "/tags/"
+# weight = 20
 
 [[menu.main]]
-identifier = "categories"
-name = "categories"
-url = "/categories/"
-weight = 10
-
-[[menu.main]]
-identifier = "tags"
-name = "tags"
-url = "/tags/"
-weight = 20
-
-[[menu.main]]
-identifier = "example"
-name = "example.org"
-url = "https://example.org"
+identifier = "Portfolio"
+name = "iSahilMe"
+url = "https://isahil.me/"
 weight = 30
 
 [markup.highlight]

@@ -1,14 +1,21 @@
 +++
-title = 'Cat VS Dog'
+title = 'A Simple Model for Cat vs. Dog Image Classification'
 date = 2024-08-28T17:54:29-04:00
 draft = false
 summary = "This Colab notebook demonstrates how to build an dog or cat image classifier using the fastai library."
-series = ["AI"]
+series = ["AI",]
 weight = 2
-tags = ["AI", "FastAI"]
+tags = ["AI", "FastAI", "Machine Learning", "Computer Vision", "Image Classification", "Cat vs. Dog", "Deep Learning", "Neural Networks", "Convolutional Neural Networks (CNNs)", "Image Recognition", "Artificial Intelligence", "FastAI"]
 author= ["Me"]
 +++
-This Colab notebook demonstrates how to build an image classifier using the fastai library. It uses the Oxford-IIIT Pet Dataset to classify images of cats and dogs. The `ImageDataLoaders` class is used to load the images and apply transformations. A ResNet-34 model is used as the base architecture and fine-tuned for this task. The error_rate metric is used to evaluate the model's performance.
+
+This Colab notebook delves into the world of image classification, specifically focusing on the age-old challenge of identifying cats and dogs in pictures. To achieve this feat, we leverage the power of fast.ai, a high-level deep learning library renowned for its user-friendliness and efficiency.
+
+The Oxford-IIIT Pet Dataset, a comprehensive collection of labeled cat and dog images, will serve as our training ground. We'll utilize fast.ai's intuitive functionalities, specifically the ImageDataLoaders class, to seamlessly load, manage, and pre-process our image data. This ensures our model receives images in a format that optimizes its learning process.
+
+As the foundation of our classifier, we'll employ the well-respected ResNet-34 architecture. This deep neural network boasts impressive accuracy and efficiency in image classification tasks. Through the magic of fast.ai, we'll fine-tune this model on the Oxford-IIIT Pet Dataset, effectively tailoring its capabilities to the specific challenge of differentiating cats from dogs.
+
+The error_rate metric will be our tool for evaluating the model's performance. This metric quantifies the model's accuracy in correctly classifying images. By minimizing the error_rate through fine-tuning with fast.ai, we aim to create a robust classifier that surpasses human-level accuracy in distinguishing these furry friends.
 
 
 *Install Necessary libraries*
@@ -194,7 +201,7 @@ learner.show_results()
     
 
 
-# Testing Model
+## Testing Model
 
 Here we are download random 10 images from duckduckgo to test our model prediction.
 
